@@ -20,53 +20,36 @@ import ProductBox from '@/components/ProductBox'
 export default {
     name: 'Category',
     components: {
-        ProductBox
+        ProductBox,
     },
     data() {
         return {
             category: {
-                products: []
-            }
-        }
+                products: [],
+            },
+        };
     },
     mounted() {
-        this.getCategory()
+        this.getCategory();
     },
     watch: {
         $route(to, from) {
             if (to.name === 'Category') {
-                this.getCategory()
+                this.getCategory();
             }
-        }
+        },
     },
     methods: {
         async getCategory() {
-            const categorySlug = this.$route.params.category_slug
-
-            this.$store.commit('setIsLoading', true)
+            const categorySlug = this.$route.params.category_slug;
 
             axios
                 .get(`/api/v1/products/${categorySlug}/`)
                 .then(response => {
-                    this.category = response.data
-
-                    document.title = this.category.name + ' | Djackets'
-                })
-                .catch(error => {
-                    console.log(error)
-
-                    toast({
-                        message: 'Something went wrong. Please try again.',
-                        type: 'is-danger',
-                        dismissible: true,
-                        pauseOnHover: true,
-                        duration: 2000,
-                        position: 'bottom-right',
-                    })
-                })
-
-            this.$store.commit('setIsLoading', false)
-        }
-    }
+                    this.category = response.data;
+                    document.title = this.category.name + ' | CookKing'
+                });
+        },
+    },
 }
 </script>

@@ -22,41 +22,37 @@ import ProductBox from '@/components/ProductBox.vue'
 export default {
     name: 'Search',
     components: {
-        ProductBox
+        ProductBox,
     },
     data() {
         return {
             products: [],
-            query: ''
-        }
+            query: '',
+        };
     },
     mounted() {
-        document.title = 'Search | Djackets'
+        document.title = 'Search | CookKing';
 
-        let uri = window.location.search.substring(1)
-        let params = new URLSearchParams(uri)
+        let uri = window.location.search.substring(1);
+        let params = new URLSearchParams(uri);
 
         if (params.get('query')) {
-            this.query = params.get('query')
-
-            this.performSearch()
+            this.query = params.get('query');
+            this.performSearch();
         }
     },
     methods: {
         async performSearch() {
-            this.$store.commit('setIsLoading', true)
+            this.$store.commit('setIsLoading', true);
 
             await axios
-                .post('/api/v1/products/search/', {'query': this.query})
+                .post('/api/v1/products/search/', { 'query': this.query })
                 .then(response => {
-                    this.products = response.data
-                })
-                .catch(error => {
-                    console.log(error)
-                })
+                    this.products = response.data;
+                });
 
-            this.$store.commit('setIsLoading', false)
-        }
-    }
+            this.$store.commit('setIsLoading', false);
+        },
+    },
 }
 </script>

@@ -17,8 +17,8 @@
 export default {
     name: 'ProductBox',
     props: {
-        product: Object
-    }
+        product: Object,
+    },
 }
 </script>
 

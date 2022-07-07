@@ -30,9 +30,9 @@
                         <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
                     </div>
 
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-dark">Sign up</button>
+                    <div>
+                        <div>
+                            <button>Sign up</button>
                         </div>
                     </div>
 

@@ -33,17 +33,17 @@
 export default {
     name: 'OrderSummary',
     props: {
-        order: Object
+        order: Object,
     },
     methods: {
         getItemTotal(item) {
-            return item.quantity * item.product.price
+            return item.quantity * item.product.price;
         },
         orderTotalLength(order) {
             return order.items.reduce((acc, curVal) => {
-                return acc += curVal.quantity
-            }, 0)
+                return acc += curVal.quantity;
+            }, 0);
         },
-    }
+    },
 }
 </script>
