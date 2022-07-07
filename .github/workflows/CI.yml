@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
-      working-directory: ./backend
+      working-directory: ./cooking_django
       run: |
         python tests.py test
   
@@ -57,8 +57,8 @@ jobs:
         id: backend
         uses: docker/build-push-action@v2
         with:
-          context: ./backend
-          dockerfile: ./backend/Dockerfile  
+          context: ./cooking_django
+          dockerfile: ./cooking_django/Dockerfile  
           builder: ${{ steps.buildx.outputs.name }}
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/web_dev_final_project_backend:latest
           push: true
@@ -97,8 +97,8 @@ jobs:
         id: frontend
         uses: docker/build-push-action@v2
         with:
-          context: ./frontend
-          dockerfile: ./frontend/Dockerfile  
+          context: ./cooking_vue
+          dockerfile: ./cooking_vue/Dockerfile  
           builder: ${{ steps.buildx.outputs.name }}
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/web_dev_final_project_frontend:latest
           push: true
