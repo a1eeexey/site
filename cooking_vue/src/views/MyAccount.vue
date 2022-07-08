@@ -93,7 +93,7 @@ h1 {
 .inline>.cart,
 .button {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .cart {

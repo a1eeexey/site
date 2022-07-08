@@ -201,7 +201,6 @@ window.onload = function () {
 }
 </script>
 <style scoped>
-
 h1 {
   font-family: 'Lobster', cursive;
 }
@@ -232,6 +231,7 @@ h1 {
 .delete:hover {
   opacity: 1;
 }
+
 .note {
   margin-top: 40px;
   max-width: 100px;

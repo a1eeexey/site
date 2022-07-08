@@ -13,8 +13,8 @@
     <div class="container">
         <div class="container__inner">
             <div class="container__description">
-                <div class="container__information">
 
+                <div class="container__information">
                     <div class="add_to">
                         <button @click="addToCart">
                             <svg class="favourite__icon">
@@ -23,15 +23,15 @@
                         </button>
                     </div>
                 </div>
-
-                <figure class="container__image">
-                    <img v-bind:src="product.get_image">
-                </figure>
-
-                <h1 class="title">{{ product.name }}</h1>
-
-                <p class="description">{{ product.description }}</p>
-
+                <div class="inline">
+                    <figure class="container__image">
+                        <img v-bind:src="product.get_image">
+                    </figure>
+                    <div class="information">
+                        <h1 class="title">{{ product.name }}</h1>
+                        <p class="description">{{ product.description }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -59,8 +59,7 @@ export default {
                 .get(`/api/v1/products/${category_slug}/${product_slug}`)
                 .then(response => {
                     this.product = response.data;
-
-                    document.title = this.product.name + ' | Djackets';
+                    document.title = this.product.name + ' | CookKing';
                 });
         },
         addToCart() {
@@ -83,11 +82,24 @@ export default {
     margin: 20px;
 }
 
+.information {
+    margin-left: 150px;
+}
+
+.inline>.container__image,
+.information {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+}
+
 img {
     object-fit: cover;
-    width: 100%;
     height: 100%;
     border-radius: 15px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .container__description {

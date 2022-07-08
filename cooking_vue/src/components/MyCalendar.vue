@@ -80,12 +80,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-        };
-    },
-    methods: {
-    },
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -249,7 +243,6 @@ class ProgressClock {
 </script>
 
 <style scoped>
-
 * {
     border: 0;
     box-sizing: border-box;

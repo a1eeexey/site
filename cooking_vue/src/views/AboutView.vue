@@ -88,11 +88,9 @@ export default {
     },
   },
 }
-
 </script>
 
 <style scoped>
-
 .close {
   width: 40px;
   height: 40px;

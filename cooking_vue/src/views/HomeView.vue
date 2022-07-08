@@ -121,10 +121,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
 .container>div,
 h1 {
   display: inline-block;

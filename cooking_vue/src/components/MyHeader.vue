@@ -142,13 +142,14 @@ export default {
 .btns {
   font-size: 15px;
   font-weight: 700;
-  margin-left: 300px;
+  margin-left: 400px;
   display: flex;
 }
 
 .btns__item {
   text-decoration: none;
   margin-left: 10px;
+  margin-right: 10px;
   border-radius: 12px;
   padding: 10px 10px;
   color: #bc4b51;

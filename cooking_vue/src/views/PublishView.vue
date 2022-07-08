@@ -51,13 +51,12 @@
         </svg>
         <span class="upload-file__text">Attach recipe's photos</span>
       </label>
+      
     </div>
   </div>
 </template>
 
 <style scoped>
-
-
 .container {
   margin-top: 90px;
   height: 100vh;
@@ -65,7 +64,9 @@
 }
 
 .container__inner {
-  margin: 100px 150px;
+  margin-top: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
   background-color: rgba(255, 219, 175, 0.98);
   padding: 30px;
   border-radius: 15px;

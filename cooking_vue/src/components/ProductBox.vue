@@ -31,7 +31,7 @@ export default {
     margin: 10px auto;
     padding: 20px 20px;
     width: 90%;
-    height: 300px;
+    height: 400px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -41,7 +41,7 @@ img {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .recipe__name {
@@ -58,7 +58,7 @@ img {
     text-decoration: none;
     border-radius: 15px;
     padding: 10px 20px;
-    margin-left: 210px;
+    margin-left: 250px;
     color: #91907d;
     font-size: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

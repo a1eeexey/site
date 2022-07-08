@@ -40,10 +40,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-        };
-    },
     methods: {
         topFunction() {
             document.documentElement.scrollTop = 0;

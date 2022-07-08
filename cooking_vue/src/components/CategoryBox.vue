@@ -20,10 +20,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
 .categories__grid>.grid__item {
     float: left;
 }
