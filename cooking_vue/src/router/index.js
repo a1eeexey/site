@@ -36,22 +36,17 @@ const routes = [
     component: () => import("../views/TimerView.vue"),
   },
   {
+    path: "/search",
+    name: "Search",
+    component: () => import("../views/Search.vue"),
+  },
+  {
     path: "/my-account",
     name: "MyAccount",
     component: () => import("../views/MyAccount.vue"),
     meta: {
       requireLogin: true,
     },
-  },
-  {
-    path: "/search",
-    name: "Search",
-    component: () => import("../views/Search.vue"),
-  },
-  {
-    path: "/cart",
-    name: "Cart",
-    component: () => import("../views/Cart.vue"),
   },
   {
     path: "/:category_slug/:product_slug",

@@ -211,7 +211,7 @@ export default {
 
           localStorage.setItem("token", token);
 
-          const toPath = this.$route.query.to || '/my-account';
+          const toPath = this.$route.query.to || '/cart';
 
           this.$router.push(toPath);
         })

@@ -1,7 +1,6 @@
 <template>
     <tr>
         <td><router-link :to="item.product.get_absolute_url">{{ item.product.name }}</router-link></td>
-        <td>{{ item.product.price }} likes</td>
         <td><button class="delete" @click="removeFromCart(item)"></button></td>
     </tr>
 </template>

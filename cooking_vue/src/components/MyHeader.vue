@@ -48,10 +48,7 @@
           <div class="btns">
             <div>
               <template v-if="$store.state.isAuthenticated">
-                <router-link class="btns__item" to="/my-account">My recipes</router-link>
-                <router-link class="btns__item" to="/cart">
-                  <span>Cart ({{ cartTotalLength }})</span>
-                </router-link>
+                <router-link class="btns__item" to="/my-account">My account</router-link>
               </template>
 
               <template v-else>
