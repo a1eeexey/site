@@ -11,7 +11,6 @@
                 <p class="description">{{ product.description }}</p>
 
                 <div class="container__information">
-                    <p class="likes"><strong>Likes: </strong>{{ product.price }}</p>
 
                     <div class="add_to">
                         <button @click="addToCart">Add to favourite</button>

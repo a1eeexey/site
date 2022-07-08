@@ -6,7 +6,7 @@
             </div>
             
             <div class="column is-12">
-                <button @click="logout()" class="button is-danger">Log out</button>
+                <button @click="logout()" class="button is-danger">Log out </button>
             </div>
 
             <div class="column is-12 box">
@@ -23,6 +23,7 @@
                 </table>
 
                 <p v-else>You don't have any products in your cart...</p>
+
             </div>
         </div>
     </div>

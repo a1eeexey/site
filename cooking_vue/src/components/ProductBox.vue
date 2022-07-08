@@ -9,7 +9,6 @@
             </figure>
 
             <div class="recipe__container">
-                <p class="recipe__likes">{{ product.price }} likes</p>
                 <router-link v-bind:to="product.get_absolute_url" class="recipe__about">View recipe</router-link>
             </div>
         </div>
