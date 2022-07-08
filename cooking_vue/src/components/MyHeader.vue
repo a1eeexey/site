@@ -1,4 +1,15 @@
 <template>
+  <svg style="display: none;">
+
+    <symbol id="search" viewBox="0 0 413.842 413.842">
+      <path d="M401.395,341.29l-69.568-69.568c-4.731-4.732-12.402-4.732-17.134,0l-7.343,7.343l-28.907-28.908
+	c20.261-26.247,32.335-59.122,32.335-94.769C310.777,69.707,241.07,0,155.389,0C69.707,0,0,69.707,0,155.388
+	c0,85.682,69.707,155.389,155.389,155.389c35.646,0,68.521-12.073,94.769-32.335l28.907,28.908l-7.343,7.343
+	c-4.731,4.731-4.731,12.402,0,17.134l69.569,69.568c16.597,16.597,43.507,16.597,60.104,0
+	C417.992,384.797,417.992,357.887,401.395,341.29z M155.389,79.34c-41.934,0-76.049,34.115-76.049,76.049c0,11.046-8.954,20-20,20
+	s-20-8.954-20-20C39.339,91.4,91.399,39.34,155.389,39.34c11.046,0,20,8.954,20,20S166.435,79.34,155.389,79.34z" />
+    </symbol>
+  </svg>
   <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
@@ -14,7 +25,9 @@
           <form method="get" action="/search">
             <input class="search__input" type="text" placeholder="Recipe search..." name="query">
             <button class="search__btn">
-              <i></i>
+              <svg class="search__icon">
+                <use xlink:href="#search"></use>
+              </svg>
             </button>
           </form>
         </div>
@@ -35,15 +48,15 @@
           <div class="btns">
             <div>
               <template v-if="$store.state.isAuthenticated">
-                <router-link to="/my-account">My account</router-link>
-                <router-link to="/cart">
+                <router-link class="btns__item" to="/my-account">My recipes</router-link>
+                <router-link class="btns__item" to="/cart">
                   <span>Cart ({{ cartTotalLength }})</span>
                 </router-link>
               </template>
 
               <template v-else>
                 <a>
-                  <router-link class="btns__item" to="/authority">Authority</router-link>
+                  <router-link class="btns__item_authority" to="/authority">Authority</router-link>
                 </a>
               </template>
             </div>
@@ -114,7 +127,7 @@ export default {
 .nav__link {
   color: #fff;
   text-decoration: none;
-  opacity: .75;
+  opacity: 0.75;
   border-left: 1px solid #fff;
   border-radius: 12px;
   padding: 10px 20px;
@@ -132,7 +145,7 @@ export default {
 .btns {
   font-size: 15px;
   font-weight: 700;
-  margin-left: 350px;
+  margin-left: 250px;
   display: flex;
 }
 
@@ -143,43 +156,66 @@ export default {
   padding: 10px 10px;
   color: #bc4b51;
   background-color: #fff;
-  opacity: 0.75;
+  opacity: 0.9;
   box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btns__item_authority {
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 12px;
+  padding: 10px 10px;
+  color: #bc4b51;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+  margin-left: 100px;
 }
 
 .btns__item:hover {
   opacity: 1;
 }
 
-.search {
+.search>.search__input,
+.search__btn {
   display: inline-block;
-  justify-content: center;
-  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
 }
 
 .search__input {
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 12px;
   background: none;
   outline: none;
+  border: 1px solid #91907d;
+  transition: all 0.1s linear;
+  color: #91907d;
+}
+
+.search__input:focus {
+  border: 1px solid #bc4b51;
 }
 
 .search__btn {
   background: none;
   outline: none;
-  height: 15px;
-  position: relative;
+  height: 20px;
+  width: 15px;
   margin-left: 5px;
-  border: 1px solid #bc4b51;
   cursor: pointer;
-  color: #bc4b51;
-  opacity: 0.9;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 2px;
+  border: none;
 }
 
-.search__btn:hover {
-  border-color: #91907d;
-  color: #91907d;
-  background-color: #f9e3dc;
+.search__icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+  fill: #91907d;
+  transition: all 0.1s linear;
+}
+
+.search__icon:hover {
+  fill: #bc4b51;
 }
 </style>
