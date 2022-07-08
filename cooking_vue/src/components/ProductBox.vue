@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 .recipe {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -50,16 +52,14 @@ img {
     margin-top: 0;
     padding: 5px 20px;
     border-radius: 12px;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .recipe__likes {
     font-size: 15px;
     margin-left: 5px;
-}
-
-hr {
-    color: #91907d;
 }
 
 .recipe__container>p,

@@ -6,7 +6,7 @@
             </div>
 
             <div class="column is-12 box">
-                <table class="table is-fullwidth" v-if="cartTotalLength">
+                <table class="table is-fullwidth" v-if="cart.items.length">
                     <thead>
                         <tr>
                             <th>Product</th>
@@ -27,16 +27,6 @@
                 </table>
 
                 <p v-else>You don't have any products in your cart...</p>
-            </div>
-
-            <div class="column is-12 box">
-                <h2 class="subtitle">Summary</h2>
-
-                <strong>${{ cartTotalPrice.toFixed(2) }}</strong>, {{ cartTotalLength }} items
-
-                <hr>
-
-                <router-link to="/cart/checkout" class="button is-dark">Proceed to checkout</router-link>
             </div>
         </div>
     </div>
@@ -63,18 +53,6 @@ export default {
     methods: {
         removeFromCart(item) {
             this.cart.items = this.cart.items.filter(i => i.product.id !== item.product.id);
-        },
-    },
-    computed: {
-        cartTotalLength() {
-            return this.cart.items.reduce((acc, curVal) => {
-                return acc += curVal.quantity;
-            }, 0);
-        },
-        cartTotalPrice() {
-            return this.cart.items.reduce((acc, curVal) => {
-                return acc += curVal.product.price * curVal.quantity;
-            }, 0);
         },
     },
 }
