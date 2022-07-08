@@ -116,7 +116,7 @@ export default {
   flex-direction: column;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  background-color: #ffdbaf;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .container__feedback {

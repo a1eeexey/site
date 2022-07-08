@@ -26,11 +26,10 @@ export default {
 </script>
 
 <style scoped>
-
 .recipe {
-    background-color: rgba(255, 219, 175, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    margin: 30px auto;
+    margin: 10px auto;
     padding: 20px 20px;
     width: 90%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -81,6 +80,7 @@ router-link {
 }
 
 .recipe__about:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(37, 37, 37, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 </style>

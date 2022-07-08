@@ -184,5 +184,6 @@ h3 {
   margin: 10px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
 }
 </style>
