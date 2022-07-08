@@ -1,29 +1,30 @@
 <template>
-    <div class="page-cart">
-        <div class="columns is-multiline">
-            <div class="column is-12">
-                <h1 class="title">Cart</h1>
-            </div>
-            
-            <div class="column is-12">
-                <button @click="logout()" class="button is-danger">Log out </button>
+    <div class="container">
+        <div class="container__inner">
+            <div>
+                <h1 class="title">Favourites</h1>
             </div>
 
-            <div class="column is-12 box">
-                <table class="table is-fullwidth" v-if="cart.items.length">
-                    
+            <div class="inline">
+                <div class="cart">
+                    <table v-if="cart.items.length">
 
-                    <tbody>
-                        <CartItem
-                            v-for="item in cart.items"
-                            v-bind:key="item.product.id"
-                            v-bind:initialItem="item"
-                            v-on:removeFromCart="removeFromCart" />
-                    </tbody>
-                </table>
 
-                <p v-else>You don't have any products in your cart...</p>
+                        <tbody>
+                            <CartItem v-for="item in cart.items" v-bind:key="item.product.id" v-bind:initialItem="item"
+                                v-on:removeFromCart="removeFromCart" />
+                        </tbody>
+                    </table>
 
+                    <p v-else>You don't have any products in your favourites...</p>
+
+                </div>
+                <div class="button">
+                    <center>
+                        <button @click="logout()">Sign out </button>
+                        <h3>We will wait for you again!</h3>
+                    </center>
+                </div>
             </div>
         </div>
     </div>
@@ -67,3 +68,70 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.container {
+    height: 100vh;
+}
+
+.container__inner {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 219, 175, 1);
+    font-family: 'Lobster';
+    font-size: 35px;
+    transition: all 0.2s linear;
+}
+
+.inline>.cart,
+.button {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cart {
+    width: 85%;
+    background: rgba(255, 219, 175, 1);
+    margin: 10px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.button {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    height: 24vh;
+    width: 13%;
+    background: rgba(255, 219, 175, 0.9);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff8174;
+    opacity: 0.75;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    opacity: 1;
+}
+
+p {
+    font-size: 30px;
+}
+</style>

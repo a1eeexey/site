@@ -201,6 +201,7 @@ window.onload = function () {
 }
 </script>
 <style scoped>
+
 h1 {
   font-family: 'Lobster', cursive;
 }
@@ -303,7 +304,7 @@ td {
 .main {
   width: 70%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 219, 175, 0.95);
   box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }

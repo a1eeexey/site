@@ -48,12 +48,12 @@
           <div class="btns">
             <div>
               <template v-if="$store.state.isAuthenticated">
-                <router-link class="btns__item" to="/my-account">My account</router-link>
+                <router-link class="btns__item" to="/my-account">My favourites</router-link>
               </template>
 
               <template v-else>
                 <a>
-                  <router-link class="btns__item_authority" to="/authority">Authority</router-link>
+                  <router-link class="btns__item" to="/authority">Authority</router-link>
                 </a>
               </template>
             </div>
@@ -142,7 +142,7 @@ export default {
 .btns {
   font-size: 15px;
   font-weight: 700;
-  margin-left: 250px;
+  margin-left: 300px;
   display: flex;
 }
 
@@ -155,18 +155,6 @@ export default {
   background-color: #fff;
   opacity: 0.9;
   box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.btns__item_authority {
-  text-decoration: none;
-  margin-left: 10px;
-  border-radius: 12px;
-  padding: 10px 10px;
-  color: #bc4b51;
-  background-color: #fff;
-  opacity: 0.9;
-  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
-  margin-left: 100px;
 }
 
 .btns__item:hover {

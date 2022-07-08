@@ -92,6 +92,7 @@ export default {
 </script>
 
 <style scoped>
+
 .close {
   width: 40px;
   height: 40px;
@@ -116,7 +117,7 @@ export default {
   flex-direction: column;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 219, 175, 0.95);
 }
 
 .container__feedback {

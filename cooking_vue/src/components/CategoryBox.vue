@@ -23,13 +23,14 @@ export default {
 
 
 
+
 .categories__grid>.grid__item {
     float: left;
 }
 
 .grid__btn {
     margin-left: 20px;
-    background: none;
+    background: rgba(249,227,220, 0.9);
     border: none;
     color: #91907d;
     cursor: pointer;

@@ -121,6 +121,10 @@ export default {
 </script>
 
 <style scoped>
+
+
+
+
 .container>div,
 h1 {
   display: inline-block;
@@ -137,7 +141,7 @@ h1 {
   text-align: center;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 219, 175, 0.9);
   font-family: 'Lobster';
   font-size: 35px;
   transition: all 0.2s linear;
@@ -152,7 +156,7 @@ h2 {
   text-align: center;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 219, 175, 0.9);
   font-family: 'Lobster';
   font-size: 35px;
   transition: all 0.2s linear;
@@ -165,7 +169,7 @@ h3 {
   text-align: center;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 219, 175, 0.9);
   font-family: 'Lobster';
   font-size: 35px;
   transition: all 0.2s linear;
@@ -180,7 +184,7 @@ h3 {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 33.33333%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 219, 175, 0.9);
   margin: 10px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

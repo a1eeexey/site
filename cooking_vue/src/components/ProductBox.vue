@@ -25,14 +25,13 @@ export default {
 </script>
 
 <style scoped>
-
-
 .recipe {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 219, 175, 0.9);
     border-radius: 15px;
     margin: 10px auto;
     padding: 20px 20px;
     width: 90%;
+    height: 300px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -51,35 +50,23 @@ img {
     margin-top: 0;
     padding: 5px 20px;
     border-radius: 12px;
-    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.recipe__likes {
-    font-size: 15px;
-    margin-left: 5px;
-}
-
-.recipe__container>p,
-router-link {
-    display: inline-block;
-    width: 50%;
-}
-
 .recipe__about {
     text-decoration: none;
-    border: 2px solid #91907d;
     border-radius: 15px;
     padding: 10px 20px;
-    margin-left: 50px;
+    margin-left: 210px;
     color: #91907d;
     font-size: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s linear;
 }
 
 .recipe__about:hover {
     background: rgba(37, 37, 37, 0.5);
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
 }
 </style>
