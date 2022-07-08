@@ -1,22 +1,11 @@
 <template>
-    <!-- Здесь кнопки с категориями, спавнятся только первые две (надо сделать больше но сколько - это от размера виджета зависит)-->
-    <li v-for="category in Categories.slice(0, 2)" :key="category.id" :category="category">
-        <div class="column is-3">
-            <div class="box">
-                <button v-on:click="SetCategory(category.get_absolute_url)" class="is-size-12">{{ category.name }}</button>
-            </div>
+    <div class="categories__grid" v-for="category in Categories.slice(0, 5)" :key="category.id" :category="category">
+
+        <div class="grid__item">
+            <button @click="SetCategory(category.get_absolute_url)" class="grid__btn">{{ category.name }}</button>
         </div>
-        <!-- Реализация выпадающего списка на вьютифай. Вьютифая у нас кста нет и не будет. Короче тут надо по-хорошему
-        сделать выпадающий список со всеми категориями.-->
-        <v-select
-            :items="Categories"
-            v-on:change="SetCategory(category.get_absolute_url)"
-            label="..."
-            multiple
-            hint="Больше категорий"
-            persistent-hint
-        ></v-select>
-    </li>
+
+    </div>
 </template>
 
 <script>
@@ -31,4 +20,23 @@ export default {
 </script>
 
 <style scoped>
+
+.categories__grid>.grid__item {
+    float: left;
+}
+
+.grid__btn {
+    margin-left: 20px;
+    background: none;
+    border: none;
+    color: #91907d;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+.grid__btn:hover {
+    color: #4d4c3f;
+}
 </style>

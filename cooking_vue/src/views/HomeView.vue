@@ -8,24 +8,23 @@
 
   <div>
     <div>
-      <div>
-        <h2>Latest products</h2>
-      </div>
-
+      <h2>Latest products</h2>
+    </div>
+    <div class="grid">
       <ProductBox v-for="product in latestProducts" v-bind:key="product.id" v-bind:product="product" />
+    </div>
+    <div>
+      <h2>Categories</h2>
+    </div>
 
-      <div>
-        <h2>Категории</h2>
-      </div>
+    <CategoryBox :SetCategory="setCategory" :Categories="Categories" />
 
-      <CategoryBox :SetCategory="setCategory" :Categories="Categories" />
+    <div>
+      <h3>{{ category.name }}</h3>
+    </div>
 
-      <div>
-        <h2>{{ category.name }}</h2>
-      </div>
-
+    <div class="grid">
       <ProductBox v-for="product in category.products" v-bind:key="product.id" v-bind:product="product" />
-
     </div>
   </div>
 </template>
@@ -148,8 +147,42 @@ h1:hover {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+h2 {
+  width: 90%;
+  text-align: center;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: 'Lobster';
+  font-size: 35px;
+  transition: all 0.2s linear;
+  margin-top: 100px;
+  padding: 10px 20px;
+}
+
+h3 {
+  width: 50%;
+  text-align: center;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: 'Lobster';
+  font-size: 35px;
+  transition: all 0.2s linear;
+  margin-top: 100px;
+}
+
 .container__calendar {
   width: 50%;
   margin-left: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33333%);
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 </style>
