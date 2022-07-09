@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="container__inner">
+    <div class="container__inner" v-if="$store.state.isAuthenticated">
       <div class="inline">
         <form class="recipe">
           <label class="recipe__name" for="nameField">Title recipe</label><br>
@@ -51,12 +51,20 @@
         </svg>
         <span class="upload-file__text">Attach recipe's photos</span>
       </label>
-      
+
     </div>
+    <h1 v-else>Please login to the site so you can add your own recipes!</h1>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'PublishView',
+}
+</script>
+
 <style scoped>
+
 .container {
   margin-top: 90px;
   height: 100vh;
@@ -70,6 +78,14 @@
   background-color: rgba(255, 219, 175, 0.98);
   padding: 30px;
   border-radius: 15px;
+}
+
+h1 {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  color: #ff9883;
+  background: rgba(255, 219, 175, 0.97);
 }
 
 label {

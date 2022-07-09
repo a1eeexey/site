@@ -16,7 +16,7 @@
 
                 <div class="container__information">
                     <div class="add_to">
-                        <button @click="addToCart">
+                        <button @click="addToCart" v-if="$store.state.isAuthenticated">
                             <svg class="favourite__icon">
                                 <use xlink:href="#favourite"></use>
                             </svg>
