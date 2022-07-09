@@ -45,6 +45,7 @@ export default {
     data() {
         return {
             product: {},
+            quantity: 1,
         };
     },
     mounted() {
@@ -65,6 +66,7 @@ export default {
         addToCart() {
             const item = {
                 product: this.product,
+                quantity: this.quantity,
             };
             this.$store.commit('addToCart', item);
         },
